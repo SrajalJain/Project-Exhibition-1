@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Face Detection App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- App Container -->
+  <div class="app-container">
+
+    <!-- Topbar -->
+    <nav class="topnav">
+      <h1 class="logo">AIApp</h1>
+      <ul class="topnav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#upload">Detection</a></li>
+        <li><a href="#chatbot">Chatbot</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+
+      <!-- Home Section -->
+      <section id="home" class="section home">
+        <div class="home-content">
+          <h1>AI-Powered Face Detection</h1>
+          <p>Upload an image to analyze faces.</p>
+          <button class="cta-btn"><a href="#upload">Get Started</a></button>
+        </div>
+      </section>
+
+      <!-- Face Detection Section -->
+      <section id="upload" class="section upload">
+        <h2>Upload Face Image</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+          <input type="file" id="image-input" accept="image/*" required>
+          <button type="submit">Analyze Image</button>
+        </form>
+        <img id="preview-image" alt="Preview" style="display:none;" />
+        <div id="output-message"></div>
+      </section>
+
+      <!-- Chatbot Section -->
+      <section id="chatbot" class="section chatbot">
+        <h2>Chatbot</h2>
+        <p>Ask our AI assistant!</p>
+        <div class="chatbot-container">
+          <div class="chatbox" id="chatbox">
+            <div class="chatbox-messages" id="chatbox-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type your question...">
+            <button id="send-btn">Send</button>
+          </div>
+          <button class="chatbot-toggle" id="chatbot-toggle">💬 Chat</button>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about">
+        <h2>About Us</h2>
+        <p>Innovating AI solutions for face detection.</p>
+      </section>
+    </main>
+
+  </div>
+
+  
+</body>
+</html>
