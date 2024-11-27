@@ -9,15 +9,22 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #121212; /* Dark background */
+
+.jetbrains-mono {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  font-family: JetBrains, "JetBrains Mono", monospace;
+  background-color: #000000; /* Dark background */
   color: #e0e0e0; /* Light text for contrast */
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+  }
 
 /* App Container */
 .app-container {
@@ -30,26 +37,52 @@ body {
 
 /* Topbar */
 .topnav {
+
+  .som{
+    .logo {
+      margin-left: 50px;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+      
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+  }
   width: 100%;
-  height: 150px;
-  background-color: #1f1f1f;
-  color: #fff;
-  display: flex;
+  height: 120px;
+  position: sticky; 
+  top: 0;
+  z-index: 10; 
+  background:  rgba(92, 91, 91, 0.8); /* dark gray background */
+  backdrop-filter: blur(10px); /* foggy glass effect */
+  border-bottom: 5px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex; 
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-shadow: inset 0 0 200rem rgba(0, 0, 0, 0.5); /* Optional shadow effect */
 }
 
-.topnav h1 {
-  margin: 0;
+
+
+
+.topnav h1 {  
+  margin: 80px;
+  font-size: 2.5rem;
 }
 
 .topnav-links {
   display: flex;
   flex-direction: row;
-  margin: 0;
+  margin-right: 80px;
   padding-right: 50px;
 }
 
@@ -101,7 +134,7 @@ body {
 }
 
 .upload {
-  background-color: rgba(255, 64, 64, 0.9);
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +155,6 @@ body {
 }
 
 .about {
-  background-color: #1f1f1f;
 }
 
 /* Header Text */
